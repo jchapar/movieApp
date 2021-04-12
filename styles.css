@@ -3,6 +3,7 @@
 :root {
   --primary-color: #22254b;
   --secondary-color: #373b69;
+  --text-color: #7378c5;
 }
 
 * {
@@ -19,7 +20,35 @@ header {
   background-color: var(--secondary-color);
   padding: 1rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header #logout-btn {
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  transition: all 0.2s ease;
+}
+
+header #logout-btn:hover {
+  background: var(--primary-color);
+}
+
+header #myMovies-btn {
+  text-decoration: none;
+  color: var(--text-color);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+header #myMovies-btn:hover {
+  border-bottom-color: var(--text-color);
 }
 
 .search {
@@ -100,6 +129,19 @@ main {
   max-height: 100%;
   transform: translateY(101%);
   transition: transform 0.3s ease-in;
+}
+
+.overview .btn {
+  margin: 1rem 0;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.overview .btn:hover {
+  background: var(--secondary-color);
 }
 
 .movie:hover .overview {
