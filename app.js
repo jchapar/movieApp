@@ -2,9 +2,15 @@ const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
 const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=45683cbb6a8af699dc7727a6b6fdd6f6&query="';
 
+
+const header = document.getElementById('header');
 const main = document.getElementById('main');
 const form = document.getElementById('form');
 const search = document.getElementById('search');
+const login = document.getElementById('login');
+const loginBtn = document.getElementById('login-btn');
+const logoutBtn = document.getElementById('logout-btn');
+
 
 // Get initial movies
 getMovies(API_URL);
@@ -16,6 +22,21 @@ async function getMovies(url) {
     showMovies(data.results);
 }
 
+// Login to main screen
+loginBtn.addEventListener('click', () => {
+    login.style.display = 'none';
+    header.style.display = 'flex';
+    main.style.display = 'flex';
+});
+
+// Logout to login in screen
+logoutBtn.addEventListener('click', () => {
+    login.style.display = 'flex';
+    header.style.display = 'none';
+    main.style.display = 'none';
+});
+
+// Show movies within the DOM
 function showMovies(movies) {
     main.innerHTML = '';
 
@@ -42,6 +63,7 @@ function showMovies(movies) {
     })
 }
 
+// Function to movie rating color
 function getClassByRate(vote) {
     if(vote >= 8) {
         return 'green';
