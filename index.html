@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a2c4732960.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Movie App</title>
 </head>
 <body>
+    <!-- Login Page -->
+    <div class="login-container">
+        <div class="login-content">
+            <i class="fas fa-film fa-2x"></i>
+            <h1>MovieApp</h1>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" required>
+                <label for="password">Password</label>
+                <input type="password" required>
+            </form>
+            <a href="#" class="btn" id="login-btn">Log In</a>
+            <p>Don't have an account?</p>
+            <span>Create Account</span>
+        </div>
+    </div>
+
+
+    <!-- main page after user log ins -->
     <header>
         <div class="user">
             <a href="#" id="logout-btn">Log Out</a>
@@ -19,18 +40,9 @@
     </header>
 
     <main id="main">
-        <!-- <div class="movie">
-            <img src="https://images.unsplash.com/photo-1612392062335-300bb9bd3054?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Movie Title">
-            <div class="movie-info">
-                <h3>title</h3>
-                <span class="average">8</span>
-            </div>
-            <div class="overview">
-                <h3>Overview</h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam temporibus blanditiis asperiores qui odio sapiente quam, obcaecati ut minus exercitationem.
-            </div>
-        </div> -->
+        <!-- JS Code -->
     </main>
+
 
     <script src="app.js"></script>
 </body>
