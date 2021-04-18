@@ -16,12 +16,18 @@
             <h1>MovieApp</h1>
             <p>Lorem ipsum dolor sit amet consectetur.</p>
             <form>
-                <label for="username">Username</label>
-                <input type="text" required>
-                <label for="password">Password</label>
-                <input type="password" required>
+                <div class="form-control">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter Username">
+                    <small>Error Message</small>
+                </div>
+                <div class="form-control">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter Password">
+                    <small>Error Message</small>
+                </div>
+                <button type="submit" id="login-btn">Log In</button>
             </form>
-            <a href="#" class="btn" id="login-btn">Log In</a>
             <p>Don't have an account?</p>
             <span>Create Account</span>
         </div>

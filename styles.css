@@ -53,6 +53,12 @@ body {
   outline: none;
 }
 
+form small {
+  color: red;
+  letter-spacing: 1px;
+  visibility: hidden;
+}
+
 .login-container #login-btn {
   color: var(--text-color);
   background: var(--primary-color);

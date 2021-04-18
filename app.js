@@ -6,6 +6,8 @@ const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=45683cbb6a
 const header = document.getElementById('header');
 const main = document.getElementById('main');
 const form = document.getElementById('form');
+const username = document.getElementById('username');
+const password = document.getElementById('password');
 const search = document.getElementById('search');
 const login = document.getElementById('login');
 const loginBtn = document.getElementById('login-btn');
@@ -21,6 +23,7 @@ async function getMovies(url) {
 
     showMovies(data.results);
 }
+
 
 // Login to main screen
 loginBtn.addEventListener('click', () => {
