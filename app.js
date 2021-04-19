@@ -6,6 +6,7 @@ const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=45683cbb6a
 const header = document.getElementById('header');
 const main = document.getElementById('main');
 const form = document.getElementById('form');
+const loginForm = document.getElementById('login-form');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const search = document.getElementById('search');
@@ -14,19 +15,10 @@ const loginBtn = document.getElementById('login-btn');
 const logoutBtn = document.getElementById('logout-btn');
 
 
-// Get initial movies
-getMovies(API_URL);
-
-async function getMovies(url) {
-    const res = await fetch(url)
-    const data = await res.json()
-
-    showMovies(data.results);
-}
-
-
 // Login to main screen
-loginBtn.addEventListener('click', () => {
+loginBtn.addEventListener('submit', (e) => {
+    e.preventDefault();
+
     login.style.display = 'none';
     header.style.display = 'flex';
     main.style.display = 'flex';
@@ -38,6 +30,17 @@ logoutBtn.addEventListener('click', () => {
     header.style.display = 'none';
     main.style.display = 'none';
 });
+
+
+// Get initial movies
+getMovies(API_URL);
+
+async function getMovies(url) {
+    const res = await fetch(url)
+    const data = await res.json()
+
+    showMovies(data.results);
+}
 
 // Show movies within the DOM
 function showMovies(movies) {
